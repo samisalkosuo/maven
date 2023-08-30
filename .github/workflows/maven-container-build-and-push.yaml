@@ -20,6 +20,7 @@ jobs:
   call-container-build-and-push:
     uses: ./.github/workflows/reusable-container-build-and-push.yaml
     with:
+      imagename: docker.io/kazhar/maven
       tagname: $GITHUB_REF_NAME
       dockerfile: Dockerfile
     secrets: inherit
