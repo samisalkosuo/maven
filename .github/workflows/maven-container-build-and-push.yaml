@@ -1,6 +1,4 @@
-#build and push base container
-
-name: Base container build and push
+name: Maven container build and push
 
 on:
   workflow_dispatch:
