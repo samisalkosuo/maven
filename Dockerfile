@@ -10,5 +10,6 @@ RUN wget https://dlcdn.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache
     mv apache-maven-${MAVEN_VERSION} /usr/local/bin/  && \
     rm -f apache-maven-${MAVEN_VERSION}-bin.tar.gz
 
-COPY shell.sh /usr/local/bin/
-CMD ["sh","/usr/local/bin/shell.sh"]
+ENV PATH $PATH:/usr/local/bin/apache-maven-${MAVEN_VERSION}/bin
+
+CMD ["/bin/bash"]
